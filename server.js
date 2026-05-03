@@ -294,7 +294,7 @@ io.on('connection', (socket) => {
 
         const song = {
           id: videoId,
-          title: data.title || data.title || videoId,
+          title: data.title || videoId,
           duration: data.duration || 0,
           filename
         };
@@ -405,8 +405,6 @@ io.on('connection', (socket) => {
     // Relay heartbeat to all other devices for consensus
     socket.broadcast.emit('heartbeat', data);
   });
-
-  // ─── Advanced Sync: Biorhythm Phase Relay ────────────────────────────────
 
   // ─── Advanced Sync: Request Beat Lattice ──────────────────────────────────
   socket.on('requestBeatLattice', () => {

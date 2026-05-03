@@ -11,20 +11,17 @@
 <body>
   <div class="app">
 
-    <!-- Header -->
     <header class="header">
       <div class="header-left">
         <span class="logo">🎵</span>
         <h1>BeatSync</h1>
         <span class="sync-badge" id="sync-badge">Syncing...</span>
-        <span class="network-badge" id="network-quality">Good</span>
       </div>
       <div class="header-right">
         <span class="device-count" id="device-count">1 device</span>
       </div>
     </header>
 
-    <!-- Now Playing -->
     <section class="now-playing-card" id="now-playing-card">
       <div class="np-art">
         <div class="np-art-inner">
@@ -36,7 +33,6 @@
         <h2 class="np-title" id="np-title">Nothing playing yet</h2>
         <div class="np-controls">
           <button class="btn-skip" onclick="skip()">⏭ Skip</button>
-          <button class="btn-voteskip" onclick="voteSkip()" title="Vote to skip"><span id="skip-votes">?/?</span></button>
         </div>
         <div class="progress-bar-wrap">
           <div class="progress-bar" id="progress-bar"></div>
@@ -44,7 +40,6 @@
       </div>
     </section>
 
-    <!-- Add YouTube -->
     <section class="add-section">
       <h3>Add Music</h3>
       <div class="add-row">
@@ -59,7 +54,6 @@
       <div id="status-bar" class="status-bar hidden"></div>
     </section>
 
-    <!-- Queue -->
     <section class="queue-section">
       <h3>Up Next <span class="queue-count" id="queue-count"></span></h3>
       <ol id="queue-list" class="queue-list">
@@ -67,20 +61,6 @@
       </ol>
     </section>
 
-    <!-- History -->
-    <section class="history-section">
-      <h3>Recently Played</h3>
-      <div id="history-list" class="history-list">
-        <div class="history-empty">No history yet</div>
-      </div>
-    </section>
-
   </div>
-  <script>
-    // Load initial state
-    window.addEventListener('load', () => {
-      loadHistory();
-    });
-  </script>
 </body>
 </html>
